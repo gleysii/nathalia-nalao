@@ -1,0 +1,58 @@
+@import '../abstract/variaveis';
+
+@mixin texto-geral(){
+    font-size: $tamanho-do-texto / 2;
+    font-family: 'Quicksand';
+    letter-spacing: 1pt;
+    align-items: center;
+  
+}
+
+#about-container{
+    height: 78vh;
+    justify-content: center;
+
+    .section-title{
+        font-size: $tamanho-do-texto /  1.5;
+        font-weight: 500;
+        color: black;
+        font-family: 'Quicksand';
+        letter-spacing: 2px;
+        margin-left: 7vw;
+        margin-top: 15vh;
+        padding: 0.5rem;
+        border-left: $cor-quarternaria solid 3px;
+    }
+
+    #about-description{
+       @include texto-geral;
+       margin: 7vh 30vw 7vh 7vw;
+    }
+
+    #sidebar{
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        height: 78vh;
+        width: 25vw;
+        background-color: $cor-secundaria;
+        text-align: center;
+
+        #img-profile{
+            margin-top: 7vh;
+            position:relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35vh;
+            border-radius: 3%;
+            height: auto;
+        }
+        .nathalia{
+            @include texto-geral;
+            margin: 7vh 7vw 7vh 7vw;
+            color: $cor-terciaria;
+        }
+
+    }
+
+}

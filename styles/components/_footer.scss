@@ -1,22 +1,18 @@
+@import '../abstract/reset.scss';
 @import '../abstract/variaveis';
-
-@mixin texto-footer(){
-    padding-top: 2rem;
-    color: white;
-    font-family: 'Quicksand';
-}
-
 
 footer{
     background-color: $cor-principal;
-    height: 8rem;
+    height: 12vh;
     margin:0;
     text-align: center;
     color: white;
 
     p#developer{
-        @include texto-footer;
-        font-size: $tamanho-do-texto / 2.5;
+        padding-top: 2vh;
+        color: white;
+        font-family: 'Quicksand';
+        font-size: $tamanho-do-texto / 3;
         padding-bottom: 0;
 
         a{
@@ -28,7 +24,8 @@ footer{
         }
     }
     p#year{
-        @include texto-footer;
+        font-weight: 100;
+        padding-top: 1vh;
     }
 
    

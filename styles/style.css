@@ -5,41 +5,96 @@
   overflow-x: hidden;
 }
 
+#about-container {
+  height: 78vh;
+  justify-content: center;
+}
+#about-container .section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  margin-left: 7vw;
+  margin-top: 15vh;
+  padding: 0.5rem;
+  border-left: #dce677 solid 3px;
+}
+#about-container #about-description {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  letter-spacing: 1pt;
+  align-items: center;
+  margin: 7vh 30vw 7vh 7vw;
+}
+#about-container #sidebar {
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  height: 78vh;
+  width: 25vw;
+  background-color: #61876E;
+  text-align: center;
+}
+#about-container #sidebar #img-profile {
+  margin-top: 7vh;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35vh;
+  border-radius: 3%;
+  height: auto;
+}
+#about-container #sidebar .nathalia {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  letter-spacing: 1pt;
+  align-items: center;
+  margin: 7vh 7vw 7vh 7vw;
+  color: #A6BB8D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 footer {
   background-color: #3C6255;
-  height: 8rem;
+  height: 12vh;
   margin: 0;
   text-align: center;
   color: white;
 }
 footer p#developer {
-  padding-top: 2rem;
+  padding-top: 2vh;
   color: white;
   font-family: "Quicksand";
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-bottom: 0;
 }
 footer p#developer a {
   text-decoration: none;
-  color: #EAE7B1;
+  color: #dce677;
 }
 footer p#developer a:hover {
   letter-spacing: 0.1em;
 }
 footer p#year {
-  padding-top: 2rem;
-  color: white;
-  font-family: "Quicksand";
+  font-weight: 100;
+  padding-top: 1vh;
 }
 
 nav {
   background-color: #3C6255;
-  padding: 2rem;
+  height: 10vh;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
 }
 nav .logo {
+  padding: 3vh;
   display: flex;
   color: white;
   text-decoration: none;
@@ -52,6 +107,7 @@ nav .logo:hover {
   color: #A6BB8D;
 }
 nav ul {
+  padding: 3vh;
   display: flex;
 }
 nav ul li {
@@ -72,6 +128,6 @@ nav ul li a:hover {
 }
 
 .img-header {
-  width: 20%;
-  height: 50%;
+  width: 78vh;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

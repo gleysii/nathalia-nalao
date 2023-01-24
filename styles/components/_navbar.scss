@@ -16,17 +16,19 @@
 
 nav{
     background-color: $cor-principal;
-    padding: 2rem;
+    height: 10vh;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     
     .logo{
+        padding: 3vh;
         display: flex;
         @include texto-nav;
     }
     
     ul{
+        padding: 3vh;
         display: flex;
 
         li{
