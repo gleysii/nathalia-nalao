@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: #3C6255;
+  height: 8rem;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+footer p#developer {
+  padding-top: 2rem;
+  color: white;
+  font-family: "Quicksand";
+  font-size: 1.2rem;
+  padding-bottom: 0;
+}
+footer p#developer a {
+  text-decoration: none;
+  color: #EAE7B1;
+}
+footer p#developer a:hover {
+  letter-spacing: 0.1em;
+}
+footer p#year {
+  padding-top: 2rem;
+  color: white;
+  font-family: "Quicksand";
+}
+
+nav {
+  background-color: #3C6255;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .logo {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Quicksand";
+}
+nav .logo:hover {
+  color: #A6BB8D;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  padding-left: 3rem;
+  list-style: none;
+  color: white;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Quicksand";
+}
+nav ul li a:hover {
+  color: #A6BB8D;
+}
+
+.img-header {
+  width: 20%;
+  height: 50%;
+}/*# sourceMappingURL=style.css.map */

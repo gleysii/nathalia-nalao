@@ -1,0 +1,38 @@
+@import '../abstract/variaveis';
+
+@mixin texto-footer(){
+    padding-top: 2rem;
+    color: white;
+    font-family: 'Quicksand';
+}
+
+
+footer{
+    background-color: $cor-principal;
+    height: 8rem;
+    margin:0;
+    text-align: center;
+    color: white;
+
+    p#developer{
+        @include texto-footer;
+        font-size: $tamanho-do-texto / 2.5;
+        padding-bottom: 0;
+
+        a{
+            text-decoration: none;
+            color: $cor-quarternaria;
+            &:hover{
+                letter-spacing: 0.1em;
+            }   
+        }
+    }
+    p#year{
+        @include texto-footer;
+    }
+
+   
+  
+
+   
+}

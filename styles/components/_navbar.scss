@@ -1,0 +1,43 @@
+@import '../abstract/variaveis';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+@mixin texto-nav(){
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $tamanho-do-texto / 2;
+    font-weight: 300;
+    font-family: 'Quicksand';
+    &:hover{
+       color: $cor-terciaria;
+    }
+}
+
+nav{
+    background-color: $cor-principal;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    
+    .logo{
+        display: flex;
+        @include texto-nav;
+    }
+    
+    ul{
+        display: flex;
+
+        li{
+            padding-left: $tamanho-do-texto;
+            list-style: none;
+            color: white;
+            a{
+                @include texto-nav;
+            }
+        }
+
+    }
+    
+}
