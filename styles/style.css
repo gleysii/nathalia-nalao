@@ -1,4 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -30,7 +37,7 @@
 #about-container #sidebar {
   position: absolute;
   right: 0;
-  top: 10vh;
+  top: 8vh;
   height: 78vh;
   width: 25vw;
   background-color: #61876E;
@@ -62,7 +69,7 @@
 
 footer {
   background-color: #3C6255;
-  height: 12vh;
+  height: 14vh;
   margin: 0;
   text-align: center;
   color: white;
@@ -72,7 +79,7 @@ footer p#developer {
   color: white;
   font-family: "Quicksand";
   font-size: 1rem;
-  padding-bottom: 0;
+  margin-bottom: 2vh;
 }
 footer p#developer a {
   text-decoration: none;
@@ -83,39 +90,46 @@ footer p#developer a:hover {
 }
 footer p#year {
   font-weight: 100;
-  padding-top: 1vh;
 }
 
-nav {
-  background-color: #3C6255;
-  height: 10vh;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
-nav .logo {
-  padding: 3vh;
+
+.top-nav {
+  background-color: #3C6255;
+  height: 8vh;
+  vertical-align: center;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.top-nav .brand {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Quicksand";
+  margin-left: -30vw;
 }
-nav .logo:hover {
+.top-nav .brand:hover {
   color: #A6BB8D;
 }
-nav ul {
-  padding: 3vh;
+.top-nav nav {
+  text-align: center;
+}
+.top-nav nav ul {
   display: flex;
 }
-nav ul li {
-  padding-left: 3rem;
+.top-nav nav ul li {
+  padding-left: 3vw;
   list-style: none;
   color: white;
 }
-nav ul li a {
+.top-nav nav ul li a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -123,11 +137,111 @@ nav ul li a {
   font-weight: 300;
   font-family: "Quicksand";
 }
-nav ul li a:hover {
+.top-nav nav ul li a:hover {
   color: #A6BB8D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .img-header {
   width: 78vh;
   height: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h2.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  margin-left: 7vw;
+  margin-top: 15vh;
+  padding: 0.5rem;
+  border-left: #dce677 solid 3px;
+}
+
+#contact-container {
+  height: 78vh;
+}
+#contact-container form {
+  display: block;
+  margin: 7vh 7vw 7vh 7vw;
+}
+
+@media (max-width: 620px) {
+  nav {
+    display: none;
+  }
+  .brand {
+    display: none;
+  }
+  .menu-toggle {
+    width: 40px;
+    top: 0;
+    right: 5px;
+    margin-right: 30px;
+  }
+  .menu-toggle .one,
+.menu-toggle .two,
+.menu-toggle .three {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    margin: 8px auto;
+    transition-duration: 0.3s;
+  }
+  /*menu aberto*/
+  .top-nav.on {
+    position: absolute;
+    top: 0;
+    left: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3C6255;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-nav.on nav { /*acesso ao elemento nav com o menu clicado*/
+    display: block; /*menu é habilitado novamente por cima do menu clicado*/
+    flex-direction: column;
+  }
+  .top-nav.on .menu-toggle { /*posicionamento do ícone*/
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+  .top-nav.on .menu-toggle .one { /*posicionamento das barras com o menu clicado*/
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .top-nav.on .menu-toggle .two {
+    opacity: 0;
+  }
+  .top-nav.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(9px, -9px);
+  }
+  .top-nav.on nav li {
+    margin: auto;
+    width: auto;
+  }
+  .top-nav.on nav ul {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  .top-nav.on nav ul a {
+    transition-duration: 0.5s;
+    font-size: 1.5rem;
+    line-height: 4rem;
+  }
 }/*# sourceMappingURL=style.css.map */

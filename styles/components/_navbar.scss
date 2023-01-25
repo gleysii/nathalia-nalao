@@ -1,3 +1,4 @@
+@import '../abstract/reset';
 @import '../abstract/variaveis';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
@@ -14,32 +15,35 @@
     }
 }
 
-nav{
+.top-nav{
     background-color: $cor-principal;
-    height: 10vh;
-    text-align: center;
+    height: 8vh;
+    vertical-align: center;
     display: flex;
-    justify-content: space-evenly;
-    
-    .logo{
-        padding: 3vh;
-        display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .brand{
         @include texto-nav;
+        margin-left: -30vw;
     }
-    
-    ul{
-        padding: 3vh;
-        display: flex;
 
-        li{
-            padding-left: $tamanho-do-texto;
-            list-style: none;
-            color: white;
-            a{
-                @include texto-nav;
+    nav{
+        text-align: center;
+            
+        ul{
+            
+            display: flex;
+            li{
+                padding-left: 3vw;
+                list-style: none;
+                color: white;
+                a{
+                    @include texto-nav;
+                }
             }
-        }
 
+        }
     }
-    
 }
+

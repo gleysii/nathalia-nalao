@@ -6,3 +6,22 @@ $cor-quarternaria: #dce677;
 
 //fontes
 $tamanho-do-texto: 3rem;
+
+@mixin texto-geral(){
+    font-size: $tamanho-do-texto / 2;
+    font-family: 'Quicksand';
+    letter-spacing: 1pt;
+    align-items: center;
+}
+
+@mixin titulos(){
+    font-size: $tamanho-do-texto /  1.5;
+    font-weight: 500;
+    color: black;
+    font-family: 'Quicksand';
+    letter-spacing: 2px;
+    margin-left: 7vw;
+    margin-top: 15vh;
+    padding: 0.5rem;
+    border-left: $cor-quarternaria solid 3px;
+}

@@ -1,27 +1,12 @@
+@import '../abstract/reset';
 @import '../abstract/variaveis';
-
-@mixin texto-geral(){
-    font-size: $tamanho-do-texto / 2;
-    font-family: 'Quicksand';
-    letter-spacing: 1pt;
-    align-items: center;
-  
-}
 
 #about-container{
     height: 78vh;
     justify-content: center;
 
     .section-title{
-        font-size: $tamanho-do-texto /  1.5;
-        font-weight: 500;
-        color: black;
-        font-family: 'Quicksand';
-        letter-spacing: 2px;
-        margin-left: 7vw;
-        margin-top: 15vh;
-        padding: 0.5rem;
-        border-left: $cor-quarternaria solid 3px;
+        @include titulos;
     }
 
     #about-description{
@@ -32,7 +17,7 @@
     #sidebar{
         position: absolute;
         right: 0;
-        top: 10vh;
+        top: 8vh;
         height: 78vh;
         width: 25vw;
         background-color: $cor-secundaria;
