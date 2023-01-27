@@ -31,8 +31,7 @@
     nav{
         text-align: center;
             
-        ul{
-            
+        ul{  
             display: flex;
             li{
                 padding-left: 3vw;
@@ -40,6 +39,7 @@
                 color: white;
                 a{
                     @include texto-nav;
+                    font-size: $tamanho-do-texto / 2.6;
                 }
             }
 

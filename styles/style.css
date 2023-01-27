@@ -6,12 +6,6 @@
   overflow-x: hidden;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
-
 #about-container {
   height: 78vh;
   justify-content: center;
@@ -40,7 +34,7 @@
   top: 8vh;
   height: 78vh;
   width: 25vw;
-  background-color: #61876E;
+  background-color: #61876e;
   text-align: center;
 }
 #about-container #sidebar #img-profile {
@@ -136,6 +130,7 @@ footer p#year {
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Quicksand";
+  font-size: 1.1538461538rem;
 }
 .top-nav nav ul li a:hover {
   color: #A6BB8D;
@@ -171,14 +166,105 @@ h2.section-title {
 }
 
 #contact-container {
-  height: 78vh;
-}
-#contact-container form {
   display: block;
-  margin: 7vh 7vw 7vh 7vw;
+  height: 100vh;
+}
+#contact-container .title-container .section-title-contact {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  margin-left: 7vw;
+  margin-top: 15vh;
+  padding: 0.5rem;
+  border-left: #dce677 solid 3px;
+  margin-top: 5vh;
+}
+#contact-container .principal-container {
+  display: flex;
+  justify-content: center;
+}
+#contact-container .principal-container .formulario-container {
+  width: 43vw;
+  height: 60vh;
+  background-color: #61876e;
+  margin: 5vh 0vw 2vh 0;
+  border-radius: 2% 0 0 2%;
+}
+#contact-container .principal-container .formulario-container form {
+  padding: 7vh 0vw 0vh 0vw;
+  justify-content: center;
+}
+#contact-container .principal-container .formulario-container form label {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  margin-left: 7vw;
+  margin-top: 15vh;
+  padding: 0.5rem;
+  border-left: #dce677 solid 3px;
+  font-size: 1.5rem;
+}
+#contact-container .principal-container .formulario-container form input#email {
+  margin-top: 5vh;
+  display: block;
+  width: 30vw;
+  margin-left: 7vw;
+  margin-bottom: 2vh;
+  height: 5vh;
+}
+#contact-container .principal-container .formulario-container form input#message {
+  margin-top: 5vh;
+  display: block;
+  width: 30vw;
+  margin-left: 7vw;
+  margin-bottom: 2vh;
+  height: 10vh;
+}
+#contact-container .principal-container .formulario-container form button {
+  text-transform: uppercase;
+  color: black;
+  border-radius: 2%;
+  border: 1px solid black;
+  width: 150px;
+  background-color: #A6BB8D;
+  padding: 1vh;
+  display: block;
+  margin-top: 5vh;
+  margin-left: 17vw;
+}
+#contact-container .principal-container .formulario-container form button:hover {
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #346049;
+}
+#contact-container .principal-container .img-contact-container {
+  text-align: center;
+  vertical-align: center;
+  width: 43vw;
+  height: 60vh;
+  background-color: #A6BB8D;
+  margin: 5vh 0vw 7vh 0vw;
+  border-radius: 0px 2% 2% 0;
+}
+#contact-container .principal-container .img-contact-container .interior-designer {
+  margin-top: 10vh;
+  width: 70%;
+  height: auto;
+  border-radius: 2%;
 }
 
 @media (max-width: 620px) {
+  .top-nav {
+    justify-content: flex-start;
+  }
   nav {
     display: none;
   }
@@ -186,10 +272,9 @@ h2.section-title {
     display: none;
   }
   .menu-toggle {
+    position: absolute;
     width: 40px;
-    top: 0;
-    right: 5px;
-    margin-right: 30px;
+    left: 15px;
   }
   .menu-toggle .one,
 .menu-toggle .two,
@@ -218,7 +303,7 @@ h2.section-title {
   }
   .top-nav.on .menu-toggle { /*posicionamento do ícone*/
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 15px;
   }
   .top-nav.on .menu-toggle .one { /*posicionamento das barras com o menu clicado*/

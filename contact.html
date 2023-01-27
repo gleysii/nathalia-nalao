@@ -34,24 +34,32 @@
     </header>
     <main>
         <div id="contact-container">
-            <h2 class="section-title">MEUS CONTATOS</h2>   
-            <form action="https://formsubmit.co/gleysibianchi@gmail.com" method="POST"><!--atualizar-->
-                <label for="email">E-mail</label><!--para ligar o label, o for e o id devem ser iguais-->
-                <input type="email" name="email" id="email" required>
-                <label for="message">Mensagem</label>
-                <input type="text" name="email" id="message" required>
-                <button type="submit">Enviar</button>
-                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
-           </form>
+            <div class="title-container">
+                <h2 class="section-title-contact">MEUS CONTATOS</h2> 
+            </div>
+            <div class="principal-container">
+                <div class="formulario-container"> 
+                    <form action="https://formsubmit.co/gleysibianchi@gmail.com" method="POST" style="margin-left:-10px"><!--atualizar-->
+                        <label for="email">E-mail</label><!--para ligar o label, o for e o id devem ser iguais-->
+                        <input type="email" name="email" id="email" required><br>
+                        <label for="message">Mensagem</label>
+                        <input type="text" name="email" id="message" required>
+                        <button type="submit">Enviar</button>
+                        <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> refazer-->
+                    </form>
+                </div> 
+                <div class="img-contact-container">
+                    <img class="interior-designer" src="img/undraw_Interior_design_re_7mvn.png">
+                </div>
+            </div>
         </div> 
     </main> 
     <footer>
         <p id="developer">Desenvolvido por <a href="#">Gleysi Silva</a></p>
         <p id="year">2023</p>
         <div id="social-media-container">
-            
-        </div>
         </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>
