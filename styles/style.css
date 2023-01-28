@@ -63,13 +63,13 @@
 
 footer {
   background-color: #3C6255;
-  height: 14vh;
+  height: 20vh;
   margin: 0;
   text-align: center;
   color: white;
 }
 footer p#developer {
-  padding-top: 2vh;
+  padding-top: 8vh;
   color: white;
   font-family: "Quicksand";
   font-size: 1rem;
@@ -165,6 +165,69 @@ h2.section-title {
   border-left: #dce677 solid 3px;
 }
 
+.projects-container { /*transformando em grid container*/
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin: 5rem 2rem;
+}
+
+.row {
+  flex-wrap: wrap; /*para não "sanfonar ao diminuir a tela"*/
+  width: 320px;
+}
+
+/*tamanho da miniatura no grid*/
+.row .small_img {
+  width: inherit;
+}
+
+/*configuração dos grids por elemento*/
+.row:nth-child(0) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.row:nth-child(12) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.modal {
+  /*configuração do modal*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+}
+
+/*conteúdo de dentro do modal */
+#modal_img {
+  width: 65vw;
+}
+
+/*botão "x"*/
+#bt_close {
+  color: white;
+  background-color: #000000;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  padding: 5px 10px;
+  font-size: 25px;
+  border: white solid 1px;
+}
+
+/*classe que será adicionada dinamicamente por JS*/
+.modal_active {
+  visibility: visible;
+}
+
 #contact-container {
   display: block;
   height: 100vh;
@@ -180,11 +243,12 @@ h2.section-title {
   margin-top: 15vh;
   padding: 0.5rem;
   border-left: #dce677 solid 3px;
-  margin-top: 5vh;
+  margin-top: 6vh;
 }
 #contact-container .principal-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 #contact-container .principal-container .formulario-container {
   width: 43vw;
@@ -251,11 +315,11 @@ h2.section-title {
   width: 43vw;
   height: 60vh;
   background-color: #A6BB8D;
-  margin: 5vh 0vw 7vh 0vw;
+  margin: 5vh 0vw 2vh 0vw;
   border-radius: 0px 2% 2% 0;
 }
 #contact-container .principal-container .img-contact-container .interior-designer {
-  margin-top: 10vh;
+  margin-top: 8vh;
   width: 70%;
   height: auto;
   border-radius: 2%;
