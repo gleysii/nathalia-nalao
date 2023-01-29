@@ -7,32 +7,21 @@
 }
 
 #about-container {
-  height: 78vh;
+  height: 100vh;
   justify-content: center;
-}
-#about-container .section-title {
-  font-size: 2rem;
-  font-weight: 500;
-  color: black;
-  font-family: "Quicksand";
-  letter-spacing: 2px;
-  margin-left: 7vw;
-  margin-top: 15vh;
-  padding: 0.5rem;
-  border-left: #dce677 solid 3px;
 }
 #about-container #about-description {
   font-size: 1.5rem;
   font-family: "Quicksand";
   letter-spacing: 1pt;
   align-items: center;
-  margin: 7vh 30vw 7vh 7vw;
+  margin: 5vh 30vw 7vh 7vw;
 }
 #about-container #sidebar {
   position: absolute;
   right: 0;
   top: 8vh;
-  height: 78vh;
+  height: 100vh;
   width: 25vw;
   background-color: #61876e;
   text-align: center;
@@ -135,6 +124,9 @@ footer p#year {
 .top-nav nav ul li a:hover {
   color: #A6BB8D;
 }
+.top-nav nav ul li:hover {
+  letter-spacing: 2px;
+}
 
 * {
   padding: 0;
@@ -142,9 +134,16 @@ footer p#year {
   overflow-x: hidden;
 }
 
-.img-header {
-  width: 78vh;
-  height: auto;
+#img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img-container #logo-home {
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
 }
 
 * {
@@ -154,6 +153,7 @@ footer p#year {
 }
 
 h2.section-title {
+  display: block;
   font-size: 2rem;
   font-weight: 500;
   color: black;
@@ -175,11 +175,19 @@ h2.section-title {
 .row {
   flex-wrap: wrap; /*para não "sanfonar ao diminuir a tela"*/
   width: 320px;
+  overflow: hidden; /*impede que a img transborde com o hover*/
 }
 
 /*tamanho da miniatura no grid*/
 .row .small_img {
   width: inherit;
+}
+
+.row .small_img:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+  filter: grayscale(0.8);
+  cursor: pointer;
 }
 
 /*configuração dos grids por elemento*/
@@ -221,6 +229,7 @@ h2.section-title {
   padding: 5px 10px;
   font-size: 25px;
   border: white solid 1px;
+  cursor: pointer;
 }
 
 /*classe que será adicionada dinamicamente por JS*/
@@ -258,6 +267,7 @@ h2.section-title {
   border-radius: 2% 0 0 2%;
 }
 #contact-container .principal-container .formulario-container form {
+  text-align: center;
   padding: 7vh 0vw 0vh 0vw;
   justify-content: center;
 }
@@ -273,6 +283,7 @@ h2.section-title {
   padding: 0.5rem;
   border-left: #dce677 solid 3px;
   font-size: 1.5rem;
+  margin-left: -17vw;
 }
 #contact-container .principal-container .formulario-container form input#email {
   margin-top: 5vh;
@@ -291,23 +302,29 @@ h2.section-title {
   height: 10vh;
 }
 #contact-container .principal-container .formulario-container form button {
-  text-transform: uppercase;
-  color: black;
-  border-radius: 2%;
-  border: 1px solid black;
   width: 150px;
-  background-color: #A6BB8D;
+  height: 40px;
   padding: 1vh;
-  display: block;
-  margin-top: 5vh;
-  margin-left: 17vw;
+  background-color: #A6BB8D;
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 #contact-container .principal-container .formulario-container form button:hover {
-  border: 1px solid white;
   color: white;
-  cursor: pointer;
   transition: 0.4s;
   background-color: #346049;
+  border: 1px solid rgb(255, 255, 255);
+}
+#contact-container .principal-container .formulario-container form button a {
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  font-size: 12pt;
+}
+#contact-container .principal-container .formulario-container form button a:hover {
+  color: white;
 }
 #contact-container .principal-container .img-contact-container {
   text-align: center;
@@ -319,10 +336,65 @@ h2.section-title {
   border-radius: 0px 2% 2% 0;
 }
 #contact-container .principal-container .img-contact-container .interior-designer {
-  margin-top: 8vh;
-  width: 70%;
+  margin-top: 3vh;
+  width: 80%;
   height: auto;
   border-radius: 2%;
+}
+#contact-container .social-media-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+#contact-container .social-media-container #wpp-btn {
+  width: 150px;
+  height: 40px;
+  padding: 1vh;
+  background-color: #A6BB8D;
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+}
+#contact-container .social-media-container #wpp-btn:hover {
+  color: white;
+  transition: 0.4s;
+  background-color: #075037;
+  border: 1px solid rgb(255, 255, 255);
+}
+#contact-container .social-media-container #wpp-btn a {
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  font-size: 12pt;
+}
+#contact-container .social-media-container #wpp-btn a:hover {
+  color: white;
+}
+#contact-container .social-media-container #linkedin-btn {
+  width: 150px;
+  height: 40px;
+  padding: 1vh;
+  background-color: #A6BB8D;
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+}
+#contact-container .social-media-container #linkedin-btn:hover {
+  color: white;
+  transition: 0.4s;
+  background-color: #084d91;
+  border: 1px solid rgb(255, 255, 255);
+}
+#contact-container .social-media-container #linkedin-btn a {
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  font-size: 12pt;
+}
+#contact-container .social-media-container #linkedin-btn a:hover {
+  color: white;
 }
 
 @media (max-width: 620px) {

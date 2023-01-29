@@ -2,23 +2,20 @@
 @import '../abstract/variaveis';
 
 #about-container{
-    height: 78vh;
+    height: 100vh;
     justify-content: center;
 
-    .section-title{
-        @include titulos;
-    }
 
     #about-description{
        @include texto-geral;
-       margin: 7vh 30vw 7vh 7vw;
+       margin: 5vh 30vw 7vh 7vw;
     }
 
     #sidebar{
         position: absolute;
         right: 0;
         top: 8vh;
-        height: 78vh;
+        height: 100vh;
         width: 25vw;
         background-color: $cor-secundaria;
         text-align: center;
@@ -32,6 +29,7 @@
             border-radius: 3%;
             height: auto;
         }
+
         .nathalia{
             @include texto-geral;
             margin: 7vh 7vw 7vh 7vw;

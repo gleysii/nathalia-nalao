@@ -40,6 +40,8 @@
                 a{
                     @include texto-nav;
                     font-size: $tamanho-do-texto / 2.6;
+                }&:hover{
+                    letter-spacing: 2px;
                 }
             }
 

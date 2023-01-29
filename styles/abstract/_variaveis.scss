@@ -25,3 +25,30 @@ $tamanho-do-texto: 3rem;
     padding: 0.5rem;
     border-left: $cor-quarternaria solid 3px;
 }
+
+@mixin btn($cor-fundo, $cor-hover){
+    
+    width: 150px;
+    height: 40px;
+    padding: 1vh;
+    background-color: $cor-fundo;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    &:hover{
+        color: white;
+        transition: 0.4s;
+        background-color: $cor-hover;
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    a{
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        font-size: 12pt;
+        &:hover{
+          color: white;
+        }
+    }
+}
