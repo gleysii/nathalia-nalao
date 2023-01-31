@@ -1,10 +1,12 @@
-@import '../abstract/reset';
+@import '../abstract/mediaqueries';
 @import '../abstract/variaveis';
 
 #about-container{
-    height: 100vh;
-    justify-content: center;
-
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    //alterar ordem da img
 
     #about-description{
        @include texto-geral;
@@ -15,10 +17,16 @@
         position: absolute;
         right: 0;
         top: 8vh;
-        height: 100vh;
+        height: 96vh; /*alterar no mq*/
         width: 25vw;
         background-color: $cor-secundaria;
         text-align: center;
+        
+        @include for-phone-only {    
+           position: relative;
+           width: auto;
+           height: auto;
+        }
 
         #img-profile{
             margin-top: 7vh;
@@ -37,5 +45,4 @@
         }
 
     }
-
 }
