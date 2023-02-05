@@ -7,7 +7,7 @@
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: $tamanho-do-texto / 2;
+    font-size: calc($tamanho-do-texto / 2);
     font-weight: 300;
     font-family: 'Quicksand';
     &:hover{
@@ -39,7 +39,7 @@
                 color: white;
                 a{
                     @include texto-nav;
-                    font-size: $tamanho-do-texto / 2.6;
+                    font-size:calc($tamanho-do-texto / 2.6);
                 }&:hover{
                     letter-spacing: 2px;
                 }

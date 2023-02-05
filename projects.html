@@ -18,7 +18,7 @@
 <body>
     <header>
         <header>
-            <div class = "top-nav">
+            <div id="back-here" class = "top-nav">
                 <div class = "menu-toggle">
                   <div class="one"></div>
                   <div class="two"></div>
@@ -36,15 +36,24 @@
             </div>
     </header>
     <main>
+        <div id="img-container">
+            <img class="img-1" src="img/bg-1.jpg" alt="ambiente">
+            <img class="img-mobile" src="img/bg-mobile.jpg" alt="ambiente">
+            <img class="img-2" src="img/bg-2.jpg" alt="ambiente">
+        </div>
+        <a href="#back-here"><button type="button" class="btn-back" data-aos="fade-up">↑</button></a>
         <div>
-            <h2 class="section-title">MEUS PROJETOS</h2> 
+            <h2 class="section-title">PROJETOS RESIDENCIAIS</h2> <!--add biblioteca aos-->
+        </div>
+        <div>
+            <h2 class="section-title">PROJETOS COMERCIAIS</h2> <!--add biblioteca aos-->
         </div>
 
         <div class="modal">
             <div class="modal_content">
                 <img src="img/farmacia_mini preco_concept 2.png" alt="" id="modal_img">
             </div>
-            <span id="bt_close">&times;</span><!--o x -->
+            <span id="bt_close">&times;</span><!--o botão x -->
         </div>
 
         <div class="projects-container">
@@ -95,6 +104,10 @@
             <!--sgv com links-->
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/script-modal.js"></script>
 </body>

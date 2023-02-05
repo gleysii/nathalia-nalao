@@ -2,9 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 #about-container {
   display: flex;
-  height: auto;
+  height: 80;
   flex-direction: column;
   padding-bottom: 5vh;
+}
+@media (max-width: 599px) {
+  #about-container:nth-child(4) {
+    order: 1;
+  }
+}
+@media (max-width: 599px) {
+  #about-container {
+    display: block;
+    padding-bottom: 0;
+  }
 }
 #about-container #about-description {
   font-size: 1.5rem;
@@ -16,15 +27,16 @@
 #about-container #sidebar {
   position: absolute;
   right: 0;
-  top: 8vh;
-  height: 96vh; /*alterar no mq*/
+  top: 88vh;
+  height: 95.6vh;
   width: 25vw;
   background-color: #61876e;
   text-align: center;
 }
 @media (max-width: 599px) {
   #about-container #sidebar {
-    position: relative;
+    position: static;
+    overflow: hidden;
     width: auto;
     height: auto;
   }
@@ -37,6 +49,10 @@
   width: 35vh;
   border-radius: 3%;
   height: auto;
+}
+#about-container #sidebar #img-profile:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
 #about-container #sidebar .nathalia {
   font-size: 1.5rem;
@@ -54,6 +70,7 @@
 }
 
 footer {
+  display: block;
   background-color: #3C6255;
   height: 20vh;
   margin: 0;
@@ -64,7 +81,7 @@ footer p#developer {
   padding-top: 8vh;
   color: white;
   font-family: "Quicksand";
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 2vh;
 }
 footer p#developer a {
@@ -75,7 +92,9 @@ footer p#developer a:hover {
   letter-spacing: 0.1em;
 }
 footer p#year {
+  font-family: "Quicksand";
   font-weight: 100;
+  font-size: 11pt;
 }
 
 * {
@@ -138,15 +157,22 @@ footer p#year {
 }
 
 #img-container {
+  overflow: hidden;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#img-container #logo-home {
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: 400px;
+@media (max-width: 599px) {
+  #img-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+}
+@media (max-width: 599px) {
+  #img-container .img-1, #img-container .img-2 {
+    display: none;
+  }
 }
 
 * {
@@ -166,6 +192,7 @@ h2.section-title {
   margin-top: 15vh;
   padding: 0.5rem;
   border-left: #dce677 solid 3px;
+  font-size: 1.7647058824rem;
 }
 
 .projects-container { /*transformando em grid container*/
@@ -177,8 +204,14 @@ h2.section-title {
 
 .row {
   flex-wrap: wrap; /*para não "sanfonar ao diminuir a tela"*/
-  width: 320px;
-  overflow: hidden; /*impede que a img transborde com o hover*/
+  width: 30vw;
+  overflow: hidden;
+}
+@media (max-width: 599px) {
+  .row {
+    width: 80vw;
+    overflow: hidden;
+  }
 }
 
 .small_img {
@@ -202,6 +235,12 @@ h2.section-title {
 .row:nth-child(12) {
   grid-column: 3/4;
   grid-row: 4/5;
+}
+@media (max-width: 599px) {
+  .row:nth-child(12) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
 .modal {
@@ -235,6 +274,29 @@ h2.section-title {
   cursor: pointer;
 }
 
+a button.btn-back {
+  background-color: white;
+  font-size: 28px;
+  position: fixed;
+  font-weight: 100;
+  width: 50px;
+  height: 50px;
+  bottom: 15px;
+  right: 25px;
+  color: #3C6255;
+  border: 1px solid #3C6255;
+  border-radius: 50px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 599px) {
+  a button.btn-back {
+    right: 15px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
 /*classe que será adicionada dinamicamente por JS*/
 .modal_active {
   visibility: visible;
@@ -263,22 +325,40 @@ h2.section-title {
   border-left: #dce677 solid 3px;
   margin-top: 6vh;
 }
+@media (max-width: 599px) {
+  #contact-container .title-container .section-title-contact {
+    margin-top: 10vh;
+    margin-bottom: 7vh;
+  }
+}
 #contact-container .principal-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+}
+@media (max-width: 599px) {
+  #contact-container .principal-container {
+    flex-direction: column;
+  }
 }
 #contact-container .principal-container .formulario-container {
   width: 43vw;
-  height: 60vh;
-  background-color: #61876e;
+  height: 59.7vh;
+  background-color: white;
   margin: 5vh 0vw 2vh 0;
+  border: black solid 1px;
   border-radius: 2% 0 0 2%;
 }
+@media (max-width: 599px) {
+  #contact-container .principal-container .formulario-container {
+    width: 80vw;
+    border-radius: 2%;
+  }
+}
 #contact-container .principal-container .formulario-container form {
-  text-align: center;
   padding: 7vh 0vw 0vh 0vw;
-  justify-content: center;
+  justify-content: left;
 }
 #contact-container .principal-container .formulario-container form label {
   color: white;
@@ -292,7 +372,10 @@ h2.section-title {
   padding: 0.5rem;
   border-left: #dce677 solid 3px;
   font-size: 1.5rem;
-  margin-left: -17vw;
+}
+#contact-container .principal-container .formulario-container form .button-container {
+  display: flex;
+  justify-content: center;
 }
 #contact-container .principal-container .formulario-container form input#email {
   margin-top: 5vh;
@@ -302,6 +385,11 @@ h2.section-title {
   margin-bottom: 2vh;
   height: 5vh;
 }
+@media (max-width: 599px) {
+  #contact-container .principal-container .formulario-container form input#email {
+    width: 61vw;
+  }
+}
 #contact-container .principal-container .formulario-container form input#message {
   margin-top: 5vh;
   display: block;
@@ -310,15 +398,21 @@ h2.section-title {
   margin-bottom: 2vh;
   height: 10vh;
 }
+@media (max-width: 599px) {
+  #contact-container .principal-container .formulario-container form input#message {
+    width: 61vw;
+  }
+}
 #contact-container .principal-container .formulario-container form button {
+  margin-top: 1rem;
+  font-family: "Quicksand";
   width: 150px;
   height: 40px;
   padding: 1vh;
-  background-color: #A6BB8D;
+  background-color: white;
   border: 1px solid black;
   color: black;
   border-radius: 5px;
-  text-transform: uppercase;
 }
 #contact-container .principal-container .formulario-container form button:hover {
   color: white;
@@ -336,32 +430,45 @@ h2.section-title {
   color: white;
 }
 #contact-container .principal-container .img-contact-container {
+  display: flex;
   text-align: center;
   vertical-align: center;
   width: 43vw;
   height: 60vh;
-  background-color: #A6BB8D;
   margin: 5vh 0vw 2vh 0vw;
   border-radius: 0px 2% 2% 0;
+  overflow: hidden;
 }
-#contact-container .principal-container .img-contact-container .interior-designer {
-  margin-top: 3vh;
-  width: 80%;
+@media (max-width: 599px) {
+  #contact-container .principal-container .img-contact-container {
+    display: none;
+  }
+}
+#contact-container .principal-container .img-contact-container .interior-design {
+  width: 800px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: auto;
-  border-radius: 2%;
 }
 #contact-container .social-media-container {
   display: flex;
   text-align: center;
   justify-content: center;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
+}
+@media (max-width: 599px) {
+  #contact-container .social-media-container {
+    padding-bottom: 5rem;
+  }
 }
 #contact-container .social-media-container #wpp-btn {
+  font-family: "Quicksand";
   width: 150px;
   height: 40px;
   padding: 1vh;
-  background-color: #A6BB8D;
+  background-color: white;
   border: 1px solid black;
   color: black;
   border-radius: 5px;
@@ -382,10 +489,11 @@ h2.section-title {
   color: white;
 }
 #contact-container .social-media-container #linkedin-btn {
+  font-family: "Quicksand";
   width: 150px;
   height: 40px;
   padding: 1vh;
-  background-color: #A6BB8D;
+  background-color: white;
   border: 1px solid black;
   color: black;
   border-radius: 5px;

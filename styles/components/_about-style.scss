@@ -3,10 +3,20 @@
 
 #about-container{
     display: flex;
-    height: auto;
+    height: 80;
     flex-direction: column;
     padding-bottom: 5vh;
-    //alterar ordem da img
+    
+    &:nth-child(4){
+        @include for-phone-only{
+            order: 1;
+        }
+    }
+
+    @include for-phone-only{
+        display: block;
+        padding-bottom: 0;
+    }
 
     #about-description{
        @include texto-geral;
@@ -16,14 +26,15 @@
     #sidebar{
         position: absolute;
         right: 0;
-        top: 8vh;
-        height: 96vh; /*alterar no mq*/
+        top: 88vh;
+        height: 95.6vh; 
         width: 25vw;
         background-color: $cor-secundaria;
         text-align: center;
         
         @include for-phone-only {    
-           position: relative;
+           position: static;
+           overflow: hidden;
            width: auto;
            height: auto;
         }
@@ -36,6 +47,10 @@
             width: 35vh;
             border-radius: 3%;
             height: auto;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.9;
+            }
         }
 
         .nathalia{

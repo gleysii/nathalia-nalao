@@ -13,14 +13,14 @@ $tamanho-do-texto: 3rem;
 }
 
 @mixin texto-geral(){
-    font-size: $tamanho-do-texto / 2;
+    font-size: calc($tamanho-do-texto / 2);
     font-family: 'Quicksand';
     letter-spacing: 1pt;
     align-items: center;
 }
 
 @mixin titulos(){
-    font-size: $tamanho-do-texto /  1.5;
+    font-size: calc($tamanho-do-texto /  1.5);
     font-weight: 500;
     color: black;
     font-family: 'Quicksand';
@@ -32,7 +32,7 @@ $tamanho-do-texto: 3rem;
 }
 
 @mixin btn($cor-fundo, $cor-hover){
-    
+    font-family: 'Quicksand';
     width: 150px;
     height: 40px;
     padding: 1vh;
