@@ -2,7 +2,7 @@
 @import '../abstract/variaveis';
 
 footer{
-    display: block;
+    position: static;
     background-color: $cor-principal;
     height: 20vh;
     margin:0;

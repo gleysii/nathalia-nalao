@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap");
 #about-container {
   display: flex;
   height: 80;
@@ -32,6 +33,14 @@
   width: 25vw;
   background-color: #61876e;
   text-align: center;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  #about-container #sidebar {
+    position: static;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+  }
 }
 @media (max-width: 599px) {
   #about-container #sidebar {
@@ -70,7 +79,7 @@
 }
 
 footer {
-  display: block;
+  position: static;
   background-color: #3C6255;
   height: 20vh;
   margin: 0;
@@ -106,7 +115,6 @@ footer p#year {
 .top-nav {
   background-color: #3C6255;
   height: 8vh;
-  vertical-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -118,13 +126,22 @@ footer p#year {
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Quicksand";
-  margin-left: -30vw;
 }
 .top-nav .brand:hover {
   color: #A6BB8D;
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+  .top-nav .brand {
+    font-size: 1rem;
+  }
+}
 .top-nav nav {
-  text-align: center;
+  padding-right: 10vw;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .top-nav nav {
+    padding-right: 7vw;
+  }
 }
 .top-nav nav ul {
   display: flex;
@@ -146,6 +163,12 @@ footer p#year {
 .top-nav nav ul li a:hover {
   color: #A6BB8D;
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+  .top-nav nav ul li a {
+    font-size: 0.8571428571rem;
+    padding-left: -32vw;
+  }
+}
 .top-nav nav ul li:hover {
   letter-spacing: 2px;
 }
@@ -162,17 +185,94 @@ footer p#year {
   display: flex;
   align-items: center;
   justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 599px) {
   #img-container {
-    height: 100vh;
     flex-direction: column;
   }
+}
+#img-container #designer-name {
+  padding: 1px;
+  display: flex;
+  position: absolute;
+  font-family: "WindSong", cursive;
+  color: #3C6255;
+  font-size: 5rem;
+  margin-bottom: 25vh;
+}
+#img-container #professional-description {
+  color: #3C6255;
+  text-shadow: 0px 0 black, 0 0px #3C6255, 1px 0 black, 0 -1px #3C6255;
+  display: flex;
+  position: absolute;
+  font-weight: bold;
+  margin-bottom: 11vh;
+  font-family: "Quicksand";
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 10px;
+}
+#img-container .cards-home {
+  position: absolute;
+  display: flex;
+  gap: 3rem;
+}
+#img-container .cards-home a {
+  text-decoration: none;
+}
+#img-container .cards-home a #card-projetos {
+  color: black;
+  display: flex;
+  width: 350px;
+  height: 80px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand";
+  font-size: 16pt;
+  opacity: 0.85;
+  border: solid 1px #3C6255;
+  margin-top: 25vh;
+}
+#img-container .cards-home a #card-projetos:hover {
+  cursor: pointer;
+  opacity: 1;
+  letter-spacing: 1px;
+}
+#img-container .cards-home a #card-sobre {
+  color: black;
+  display: flex;
+  width: 350px;
+  height: 80px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand";
+  font-size: 16pt;
+  opacity: 0.85;
+  border: solid 1px #3C6255;
+  margin-top: 25vh;
+}
+#img-container .cards-home a #card-sobre:hover {
+  cursor: pointer;
+  opacity: 1;
+  letter-spacing: 1px;
+}
+#img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 599px) {
   #img-container .img-1, #img-container .img-2 {
     display: none;
   }
+}
+#img-container .img-mobile {
+  max-width: 100%;
 }
 
 * {
@@ -308,9 +408,14 @@ a button.btn-back {
   overflow-x: hidden;
 }
 
+main {
+  height: auto;
+  display: block;
+}
+
 #contact-container {
   display: block;
-  height: 100vh;
+  height: auto;
 }
 #contact-container .title-container .section-title-contact {
   display: block;
@@ -327,6 +432,7 @@ a button.btn-back {
 }
 @media (max-width: 599px) {
   #contact-container .title-container .section-title-contact {
+    display: block;
     margin-top: 10vh;
     margin-bottom: 7vh;
   }
@@ -340,6 +446,7 @@ a button.btn-back {
 @media (max-width: 599px) {
   #contact-container .principal-container {
     flex-direction: column;
+    height: auto;
   }
 }
 #contact-container .principal-container .formulario-container {
@@ -372,6 +479,11 @@ a button.btn-back {
   padding: 0.5rem;
   border-left: #dce677 solid 3px;
   font-size: 1.5rem;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  #contact-container .principal-container .formulario-container form label {
+    font-size: 1.2rem;
+  }
 }
 #contact-container .principal-container .formulario-container form .button-container {
   display: flex;
@@ -457,11 +569,7 @@ a button.btn-back {
   justify-content: center;
   gap: 2rem;
   padding-top: 3rem;
-}
-@media (max-width: 599px) {
-  #contact-container .social-media-container {
-    padding-bottom: 5rem;
-  }
+  padding-bottom: 5rem;
 }
 #contact-container .social-media-container #wpp-btn {
   font-family: "Quicksand";

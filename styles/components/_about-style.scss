@@ -24,6 +24,7 @@
     }
 
     #sidebar{
+        
         position: absolute;
         right: 0;
         top: 88vh;
@@ -31,6 +32,13 @@
         width: 25vw;
         background-color: $cor-secundaria;
         text-align: center;
+
+        @include for-tablet{    
+            position: static;
+            overflow: hidden;
+            width: auto;
+            height: auto;
+        }
         
         @include for-phone-only {    
            position: static;
@@ -39,6 +47,7 @@
            height: auto;
         }
 
+        
         #img-profile{
             margin-top: 7vh;
             position:relative;

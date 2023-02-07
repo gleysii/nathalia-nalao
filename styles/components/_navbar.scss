@@ -18,19 +18,25 @@
 .top-nav{
     background-color: $cor-principal;
     height: 8vh;
-    vertical-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     .brand{
         @include texto-nav;
-        margin-left: -30vw;
+        @include for-tablet{
+            font-size:calc($tamanho-do-texto / 3);
+        }
+
+    
     }
 
     nav{
-        text-align: center;
-            
+        padding-right: 10vw;
+        @include for-tablet{
+            padding-right: 7vw;
+        }
+
         ul{  
             display: flex;
             li{
@@ -40,6 +46,12 @@
                 a{
                     @include texto-nav;
                     font-size:calc($tamanho-do-texto / 2.6);
+
+                    @include for-tablet{
+                        font-size:calc($tamanho-do-texto / 3.5);
+                        padding-left: -32vw;
+                    }
+
                 }&:hover{
                     letter-spacing: 2px;
                 }

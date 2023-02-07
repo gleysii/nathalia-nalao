@@ -10,6 +10,8 @@
     <!--css mobile menu sheet-->
     <!-- <link rel="stylesheet" href="999px_sheet.css"> -->
     <!--css media queries sheets-->
+    <!-- lib aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,9 +38,17 @@
         </div>
         <main>
             <div id="img-container">
+                <h1 id="designer-name" data-aos="fade-down">Nathalia Nalão</h1>
+                <h2 id="professional-description" data-aos="fade-up">Designer de interiores</h2>
+                <div class="cards-home">
+                    <a href="projects.html"><div id="card-projetos" data-aos="fade-up">Projetos</div></a>
+                    <a href="about.html"><div id="card-sobre" data-aos="fade-up">Sobre</div></a>
+                    
+                    
+                </div>
                 <img class="img-1" src="img/bg-1.jpg" alt="ambiente">
-                <img class="img-mobile" src="img/bg-mobile.jpg" alt="ambiente">
                 <img class="img-2" src="img/bg-2.jpg" alt="ambiente">
+                <img class="img-mobile" src="img/bg-mobile.jpg" alt="ambiente">
             </div>
         </main>
     </header>
@@ -49,6 +59,10 @@
             <!--sgv com links-->
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/mobile-menu.js"></script>
 </body>
 </html>
