@@ -20,14 +20,19 @@
 
     #about-description{
        @include texto-geral;
-       margin: 5vh 30vw 7vh 7vw;
+        margin: 5vh 30vw 7vh 7vw;
+
+       @include for-phone-only{
+        margin:5vh 8vw 7vh 7vh;
+       }
     }
 
     #sidebar{
         position: absolute;
         right: 0;
         top: 88vh;
-        height: 95.6vh; 
+        height: 110vh; 
+        z-index: -1;
         width: 25vw;
         background-color: $cor-secundaria;
         text-align: center;

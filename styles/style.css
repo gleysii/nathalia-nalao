@@ -25,11 +25,17 @@
   align-items: center;
   margin: 5vh 30vw 7vh 7vw;
 }
+@media (max-width: 599px) {
+  #about-container #about-description {
+    margin: 5vh 8vw 7vh 7vh;
+  }
+}
 #about-container #sidebar {
   position: absolute;
   right: 0;
   top: 88vh;
-  height: 95.6vh;
+  height: 110vh;
+  z-index: -1;
   width: 25vw;
   background-color: #61876e;
   text-align: center;
@@ -392,6 +398,7 @@ h2.section-title {
   transform: scale(1.2);
   filter: grayscale(0.8);
   cursor: pointer;
+  transition: all linear 0.4s;
 }
 
 /*configuração dos grids por elemento*/
@@ -422,11 +429,16 @@ h2.section-title {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: visibility 0.8s linear, opacity 0.5s;
 }
 
 /*conteúdo de dentro do modal */
 #modal_img {
   width: 65vw;
+  transform: scale(0);
+  transition: all linear 0.3s;
 }
 
 /*botão "x"*/
@@ -440,6 +452,12 @@ h2.section-title {
   font-size: 25px;
   border: white solid 1px;
   cursor: pointer;
+}
+#bt_close:hover {
+  color: #000000;
+  background-color: white;
+  border: black solid 1px;
+  transition: all ease 0.4s;
 }
 
 a button.btn-back {
@@ -468,6 +486,10 @@ a button.btn-back {
 /*classe que será adicionada dinamicamente por JS*/
 .modal_active {
   visibility: visible;
+  opacity: 1;
+}
+.modal_active #modal_img {
+  transform: scale(1);
 }
 
 * {
@@ -722,8 +744,8 @@ main {
     left: 15px;
   }
   .menu-toggle .one,
-.menu-toggle .two,
-.menu-toggle .three {
+  .menu-toggle .two,
+  .menu-toggle .three {
     background-color: white;
     height: 3px;
     width: 100%;
