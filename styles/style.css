@@ -27,7 +27,7 @@
 }
 @media (max-width: 599px) {
   #about-container #about-description {
-    margin: 5vh 8vw 7vh 7vh;
+    margin: 5vh 8vw 7vh 7vw;
   }
 }
 #about-container #sidebar {
@@ -147,6 +147,11 @@ footer p#year {
 @media (min-width: 600px) and (max-width: 1200px) {
   .top-nav nav {
     padding-right: 7vw;
+  }
+}
+@media (max-width: 599px) {
+  .top-nav nav {
+    padding-right: 0;
   }
 }
 .top-nav nav ul {
@@ -407,12 +412,12 @@ h2.section-title {
   grid-row: 1/2;
 }
 
-.row:nth-child(12) {
+.row:nth-child(28) {
   grid-column: 3/4;
   grid-row: 4/5;
 }
 @media (max-width: 599px) {
-  .row:nth-child(12) {
+  .row:nth-child(28) {
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -439,6 +444,11 @@ h2.section-title {
   width: 65vw;
   transform: scale(0);
   transition: all linear 0.3s;
+}
+@media (max-width: 599px) {
+  #modal_img {
+    width: 95vw;
+  }
 }
 
 /*botão "x"*/
@@ -550,11 +560,12 @@ main {
 @media (max-width: 599px) {
   #contact-container .principal-container .formulario-container {
     width: 80vw;
+    height: 70vh;
     border-radius: 2%;
   }
 }
 #contact-container .principal-container .formulario-container form {
-  padding: 7vh 0vw 0vh 0vw;
+  padding: 9vh 0vw 0vh 0vw;
   justify-content: left;
 }
 #contact-container .principal-container .formulario-container form label {
@@ -572,7 +583,7 @@ main {
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   #contact-container .principal-container .formulario-container form label {
-    font-size: 1.2rem;
+    font-size: 0.8571428571rem;
   }
 }
 #contact-container .principal-container .formulario-container form .button-container {
@@ -595,6 +606,11 @@ main {
 @media (max-width: 599px) {
   #contact-container .principal-container .formulario-container form input#email {
     width: 61vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  #contact-container .principal-container .formulario-container form input#email {
+    height: 5vh;
   }
 }
 #contact-container .principal-container .formulario-container form input#message {
@@ -640,6 +656,12 @@ main {
 }
 #contact-container .principal-container .formulario-container form button a:hover {
   color: white;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  #contact-container .principal-container .formulario-container form button {
+    margin-top: 0.5rem;
+    height: 6vh;
+  }
 }
 #contact-container .principal-container .img-contact-container {
   display: flex;
@@ -796,4 +818,19 @@ main {
     font-size: 1.5rem;
     line-height: 4rem;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: none;
+}
+
+#thanks-paragraph {
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  letter-spacing: 1pt;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

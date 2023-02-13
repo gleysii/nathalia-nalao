@@ -27,14 +27,16 @@
         @include for-tablet{
             font-size:calc($tamanho-do-texto / 3);
         }
-
-    
     }
 
     nav{
         padding-right: 10vw;
         @include for-tablet{
             padding-right: 7vw;
+        }
+
+        @include for-phone-only{
+            padding-right: 0;
         }
 
         ul{  
