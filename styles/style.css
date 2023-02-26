@@ -191,7 +191,7 @@ footer p#year {
 }
 
 #img-container {
-  overflow: hidden;
+  overflow-x: hidden;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -225,7 +225,7 @@ footer p#year {
   color: #3C6255;
   text-shadow: 0px 0 black, 0 0px #3C6255, 1px 0 black, 0 -1px #3C6255;
   display: flex;
-  width: 100vw;
+  width: 50vw;
   justify-content: center;
   position: absolute;
   font-weight: bold;
